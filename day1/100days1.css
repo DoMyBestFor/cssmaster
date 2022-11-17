@@ -1,0 +1,91 @@
+@charset "UTF-8";
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  border-radius: 2px;
+  /*
+    - box-shadow
+    x-position: 양수면 오른쪽, 음수면 왼쪽에 그림자가 생김
+    y-position: 양수면 아래쪽, 음수면 위쪽에 그림자가 생깁니다.
+    blur: 값이 클수록 흐려집니다.
+    spread: 양수면 그림자를 확장하고 음수면 축소합니다.
+    color: 그림자 색깔입니다.
+  */
+  box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+  /* linear-gradient
+    그라데이션을 지정합니다.
+    - direction : to - 방향
+    - color1, color2, .... colorn
+  */
+  background: linear-gradient(to bottom left, #43389f 0%, #4ec6ca 100%);
+  color: white; }
+
+.center {
+  position: absolute;
+  top: 50.8%;
+  left: 50.5%;
+  transform: translate(-50%, -50%); }
+
+.number {
+  position: relative;
+  height: 100px;
+  width: 200px; }
+  .number .one-one {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: -16px;
+    height: 40px;
+    width: 20px;
+    background: #fff;
+    border-radius: 3px;
+    transform: rotate(50deg);
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2); }
+  .number .one-two {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0px;
+    height: 100px;
+    width: 24px;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2); }
+  .number .zero-one,
+  .number .zero-two {
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    left: 17px;
+    box-sizing: border-box;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 24px solid #fff;
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.2); }
+  .number .zero-two {
+    z-index: 6;
+    left: 100px; }
+
+.big {
+  position: relative;
+  z-index: 20;
+  display: block;
+  font-size: 82px;
+  line-height: 60px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 6px; }
+
+.small {
+  position: relative;
+  z-index: 20;
+  display: block;
+  font-size: 23px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.04em; }
