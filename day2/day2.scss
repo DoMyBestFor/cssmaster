@@ -1,0 +1,26 @@
+.frame {
+  background-color: #3faf8e;
+  height: 500px;
+  display: flex;
+}
+
+.center {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  cursor: pointer;
+
+  > * {
+    width: 500px;
+    height: 30px;
+    background-color: white;
+    box-shadow: 1px 2px 10px 0px black;
+
+    border-radius: 30px;
+  }
+}
+
+.hi {
+  background-color: red;
+}
