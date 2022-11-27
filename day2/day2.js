@@ -1,4 +1,7 @@
-document.querySelector(".center").addEventListener("click", (e) => {
-  document.querySelector(".center").classList.toggle("active");
-  document.querySelectorAll(".init").forEach((temp) => temp.classList.remove("init"));
+const $center = document.querySelector(".center");
+const $inits = document.querySelectorAll(".init");
+
+$center.addEventListener("click", () => {
+  $center.classList.toggle("active");
+  $inits.forEach((init) => init.classList.remove("init"));
 });
