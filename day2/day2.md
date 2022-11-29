@@ -1,35 +1,54 @@
-#day1 
+# day2
 
 ### problem
+
 https://100dayscss.com/days/1/
 
 ### my result
-<img src="day1.png">
+
+<img src="../img/day2.gif">
 
 ### study
-* box-shadow - content에 shadow 효과를 줍니다.
-    * x-position: 양수면 오른쪽, 음수면 왼쪽에 그림자가 생김
-    * y-position: 양수면 아래쪽, 음수면 위쪽에 그림자가 생깁니다.
-    * blur: 값이 클수록 흐려집니다.
-    * spread: 양수면 그림자를 확장하고 음수면 축소합니다.
-    * color: 그림자 색깔입니다.
 
-* linear-gradient - 그라데이션을 지정합니다.
-    * direction : to - 방향
-    * color1, color2, .... colorn
+- **css를 활용하여 menu 컴포넌트를 정중앙에 두는 방법**
 
-* box-sizing - 박스의 사이즈 기준을 설정합니다.
-    * content-box : border를 포함하지 않은 size를 기준으로 계산합니다.
-    * border-box : border를 포함한 size를 기준으로 계산합니다.
+1. transform과 position 활용
+   예시 답안에서 해결해주고 있는 방안입니다.
 
-* css의 size 단위
-    * % : 백분율 단위 (100%, 150%)
-    * em : 배수 단위 (1em, 1.5em)
-    * px : px 단위
+```css
+// absolute position의 기준이 될 컴포넌트
+position: relative;
 
-> 전체 폰트 크기에 절대 크기를 지정하고 (px) 다른 태그에 상대적 크기를 지정하는 방법은 자주 사용됩니다.
+// 대상 컴포넌트
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+```
 
-* rgba 색상 지정
-    * r, g, b에 추가적으로 a는 투명도를 나타냅니다. 0이면 완전히 투명한 상태입니다.
+position을 absolute로 지정한 후에 top과 left를 50%로 설정해주면 좌측 상단 기준으로 중앙 정렬이 됩니다. 하지만 우리가 원하는 것은 컴포넌트의 무게 중심점을 기준으로 중앙 정렬이 되는 것을 원하기 때문에 translate(-50%, -50%)를 적용시켜야 합니다.
 
-    
+---
+
+2. flex 사용
+
+```css
+// 부모 컴포넌트
+display: flex;
+
+// 대상 컴포넌트
+margin: auto;
+```
+
+부모 컴포넌트를 flex로 두고 자식 컴포넌트의 margin을 auto로 설정하면 정중앙으로 정렬됩니다.
+
+```css
+// 부모 컴포넌트
+display: flex;
+
+// 대상 컴포넌트
+justify-content: center;
+align-items: center;
+```
+
+혹은 자식 컴포넌트에서 justify-content, align-items를 center로 설정하면 됩니다. justify-content와 align-items에 대해서는 아래에서 더 자세히 살펴보겠습니다.
