@@ -52,3 +52,9 @@ align-items: center;
 ```
 
 혹은 자식 컴포넌트에서 justify-content, align-items를 center로 설정하면 됩니다. justify-content와 align-items에 대해서는 아래에서 더 자세히 살펴보겠습니다.
+
+- **justify-content**
+  flex 컨테이너의 x축 혹은, grid 컨테이너의 인라인 축에서 공간을 분배하는 방법을 정의합니다. 정의에서 알 수 있는 점은 display가 flex이거나 grid인 곳에서만 동작 하겠구나라는 점을 빠르게 파악해야 합니다.
+
+- **align-items**
+  flex 컨테이너의 내부 상하관계 정렬 상태를 설정합니다.
